@@ -142,10 +142,11 @@ namespace Com.Alonsoruibal.Chess.TT
 			//			if (nodeType != TYPE_EXACT_SCORE) return;
 			//			index = startIndex;
 			keys[index] = key2;
-			info = (bestMove & unchecked((int)(0x1fffff))) | ((nodeType & unchecked((int)(0xf
-				))) << 21) | (((long)(generation & unchecked((int)(0xff)))) << 32) | (((long)(depthAnalyzed
-				 & unchecked((int)(0xff)))) << 40) | (((long)(score & unchecked((int)(0xffff))))
-				 << 48);
+			info = (((long)bestMove) & 0x1fffff) 
+				| ((((long)nodeType) & 0xf) << 21) 
+				| (((long)(generation & 0xff)) << 32) 
+				| (((long)(depthAnalyzed & 0xff)) << 40) 
+				| (((long)(score & 0xff)) << 48);
 			infos[index] = info;
 		}
 

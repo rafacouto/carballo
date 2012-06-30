@@ -316,14 +316,14 @@ namespace Com.Alonsoruibal.Chess.Search
 				sb.Append("depth ");
 				sb.Append(depth);
 			}
-			if (scoreMate != null)
+			if (scoreMate != 0)
 			{
 				sb.Append(" score mate ");
 				sb.Append(scoreMate);
 			}
 			else
 			{
-				if (scoreCp != null)
+				if (scoreCp != 0)
 				{
 					sb.Append(" score cp ");
 					sb.Append(scoreCp);

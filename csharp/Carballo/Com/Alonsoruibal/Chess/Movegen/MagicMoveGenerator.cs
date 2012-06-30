@@ -144,7 +144,7 @@ namespace Com.Alonsoruibal.Chess.Movegen
 				)))) == 0 && (board.GetTurn() ? board.GetWhiteQueensideCastling() : board.GetBlackQueensideCastling
 				()))))
 			{
-				if (myKingIndex == -1)
+				if (myKingIndex == unchecked((byte)(-1)))
 				{
 					myKingIndex = BitboardUtils.Square2Index(square);
 				}
